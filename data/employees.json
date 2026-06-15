@@ -1,0 +1,18 @@
+[
+    {
+        "employee_id": "EMP005",
+        "name": "Siva",
+        "department": "IT",
+        "position": "Intern",
+        "face_image": "EMP005.jpg",
+        "status": "active"
+    },
+    {
+        "employee_id": "EMP006",
+        "name": "Kumar",
+        "department": "Production",
+        "position": "Operator",
+        "face_image": "EMP006.jpg",
+        "status": "active"
+    }
+]

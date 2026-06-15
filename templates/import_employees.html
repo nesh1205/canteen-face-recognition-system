@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Import Employees</h2>
+
+<p class="text-muted">
+    Upload Excel file with columns:
+    <strong>employee_id, name, department, position, face_image, status</strong>
+</p>
+
+{% if message %}
+<div class="alert alert-{{ message_type }}">
+    {{ message }}
+</div>
+{% endif %}
+
+<form method="POST" enctype="multipart/form-data">
+
+    <div class="mb-3">
+        <label>Excel File</label>
+        <input type="file" name="file" class="form-control" accept=".xlsx,.xls" required>
+    </div>
+
+    <button type="submit" class="btn btn-success">
+        Import Employees
+    </button>
+
+</form>
+
+<hr>
+
+<h5>Excel Format Example</h5>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>employee_id</th>
+            <th>name</th>
+            <th>department</th>
+            <th>position</th>
+            <th>face_image</th>
+            <th>status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>EMP001</td>
+            <td>Thinesh</td>
+            <td>IT</td>
+            <td>Intern</td>
+            <td>EMP001.jpg</td>
+            <td>active</td>
+        </tr>
+    </tbody>
+</table>
+
+{% endblock %}

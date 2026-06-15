@@ -1,0 +1,42 @@
+[
+    {
+        "employee_id": "EMP001",
+        "name": "Thinesh",
+        "session": "Lunch",
+        "date": "2026-06-12",
+        "datetime": "2026-06-12 15:45:00",
+        "status": "taken"
+    },
+    {
+        "employee_id": "EMP002",
+        "name": "Ramadhan",
+        "session": "Lunch",
+        "date": "2026-06-12",
+        "datetime": "2026-06-12 15:45:31",
+        "status": "taken"
+    },
+    {
+        "employee_id": "EMP004",
+        "name": "Atiqah",
+        "session": "Lunch",
+        "date": "2026-06-12",
+        "datetime": "2026-06-12 15:54:49",
+        "status": "taken"
+    },
+    {
+        "employee_id": "EMP003",
+        "name": "Tan",
+        "session": "Lunch",
+        "date": "2026-06-12",
+        "datetime": "2026-06-12 15:55:57",
+        "status": "taken"
+    },
+    {
+        "employee_id": "EMP005",
+        "name": "Siva",
+        "session": "Lunch",
+        "date": "2026-06-15",
+        "datetime": "2026-06-15 11:27:00",
+        "status": "taken"
+    }
+]

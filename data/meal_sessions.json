@@ -1,0 +1,12 @@
+[
+  {
+    "session_name": "Lunch",
+    "start_time": "11:00",
+    "end_time": "16:00"
+  },
+  {
+    "session_name": "Dinner",
+    "start_time": "19:00",
+    "end_time": "23:00"
+  }
+]

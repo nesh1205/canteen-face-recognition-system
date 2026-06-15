@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="mb-5">
+    <h1 class="page-title"><i class="fas fa-chart-line me-2"></i>Dashboard</h1>
+    <p class="page-subtitle">
+        <i class="fas fa-info-circle me-1"></i>Canteen meal tracking and employee meal activity overview
+    </p>
+</div>
+
+<div class="row g-4 mb-5">
+
+    <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100" style="border-left: 5px solid #0d6efd;">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start">
+                    <div>
+                        <p class="text-muted mb-1 fw-500"><i class="fas fa-users me-1"></i>Total Employees</p>
+                        <h2 class="fw-bold text-primary mb-2">{{ total_employees }}</h2>
+                        <small class="text-muted">Employees registered in the system</small>
+                    </div>
+                    <div class="text-primary opacity-50">
+                        <i class="fas fa-users fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100" style="border-left: 5px solid #198754;">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start">
+                    <div>
+                        <p class="text-muted mb-1 fw-500"><i class="fas fa-receipt me-1"></i>Meal Records</p>
+                        <h2 class="fw-bold text-success mb-2">{{ total_records }}</h2>
+                        <small class="text-muted">Total meals recorded</small>
+                    </div>
+                    <div class="text-success opacity-50">
+                        <i class="fas fa-receipt fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100" style="border-left: 5px solid #28a745;">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start">
+                    <div>
+                        <p class="text-muted mb-1 fw-500"><i class="fas fa-check-circle me-1"></i>System Status</p>
+                        <h2 class="fw-bold text-success mb-2"><i class="fas fa-circle text-success"></i> Active</h2>
+                        <small class="text-muted">Canteen tracking system online</small>
+                    </div>
+                    <div class="text-success opacity-50">
+                        <i class="fas fa-server fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="card border-0 shadow-sm">
+    <div class="card-body">
+        <h4 class="fw-bold mb-4"><i class="fas fa-lightbulb me-2"></i>System Overview</h4>
+
+        <p class="text-muted mb-4">
+            The Canteen Face Recognition System streamlines employee meal attendance by identifying employees through facial recognition technology and automatically recording meal transactions.
+        </p>
+
+        <div class="row mt-4">
+
+            <div class="col-md-4 mb-3">
+                <div class="feature-box rounded p-4 h-100" style="background: linear-gradient(135deg, rgba(13, 110, 253, 0.1) 0%, rgba(13, 110, 253, 0.05) 100%); border: 1px solid rgba(13, 110, 253, 0.2);">
+                    <div class="text-center">
+                        <i class="fas fa-address-card fa-2x text-primary mb-3"></i>
+                        <h5 class="fw-bold text-dark">Employee Management</h5>
+                        <p class="text-muted small mb-0">
+                            Manage employee information and records efficiently.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <div class="feature-box rounded p-4 h-100" style="background: linear-gradient(135deg, rgba(25, 135, 84, 0.1) 0%, rgba(25, 135, 84, 0.05) 100%); border: 1px solid rgba(25, 135, 84, 0.2);">
+                    <div class="text-center">
+                        <i class="fas fa-face-smile fa-2x text-success mb-3"></i>
+                        <h5 class="fw-bold text-dark">Face Recognition</h5>
+                        <p class="text-muted small mb-0">
+                            Identify employees and record meal attendance automatically.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <div class="feature-box rounded p-4 h-100" style="background: linear-gradient(135deg, rgba(13, 110, 253, 0.1) 0%, rgba(13, 110, 253, 0.05) 100%); border: 1px solid rgba(13, 110, 253, 0.2);">
+                    <div class="text-center">
+                        <i class="fas fa-chart-bar fa-2x text-primary mb-3"></i>
+                        <h5 class="fw-bold text-dark">Reporting</h5>
+                        <p class="text-muted small mb-0">
+                            View and export detailed meal attendance records.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<style>
+.feature-box {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+</style>
+
+{% endblock %}

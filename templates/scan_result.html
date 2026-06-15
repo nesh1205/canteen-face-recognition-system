@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+    <div class="col-lg-6">
+        <div class="card border-0 shadow-sm mb-4">
+            <div class="card-body p-5">
+                <div class="text-center mb-4">
+                    {% if message_type == 'success' %}
+                    <div style="font-size: 4rem; color: #198754; margin-bottom: 1rem;">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3 class="fw-bold text-success mb-2">Scan Successful!</h3>
+                    {% else %}
+                    <div style="font-size: 4rem; color: #dc3545; margin-bottom: 1rem;">
+                        <i class="fas fa-times-circle"></i>
+                    </div>
+                    <h3 class="fw-bold text-danger mb-2">Scan Failed</h3>
+                    {% endif %}
+                </div>
+
+                <div class="alert alert-{{ message_type }} text-center" role="alert">
+                    <i class="fas fa-info-circle me-2"></i>{{ message }}
+                </div>
+
+                {% if employee %}
+                <div class="card border-0" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
+                    <div class="card-body">
+                        <h6 class="fw-bold text-muted mb-3"><i class="fas fa-user-check me-1"></i>Recognized Employee</h6>
+                        
+                        <div class="mb-3">
+                            <p class="text-muted mb-1">Employee ID</p>
+                            <p class="fw-bold text-primary">{{ employee.employee_id }}</p>
+                        </div>
+
+                        <div class="mb-3">
+                            <p class="text-muted mb-1">Name</p>
+                            <p class="fw-bold text-dark">{{ employee.name }}</p>
+                        </div>
+
+                        <div>
+                            <p class="text-muted mb-1">Department</p>
+                            <p class="fw-bold text-dark">{{ employee.department }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+
+                <div class="d-grid gap-2 mt-5">
+                    <a href="/scan_face" class="btn fw-bold py-2" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; border: none; border-radius: 8px;">
+                        <i class="fas fa-camera me-1"></i>Scan Again
+                    </a>
+                    <a href="/kiosk" class="btn fw-bold py-2" style="background: linear-gradient(135deg, #198754 0%, #20c997 100%); color: white; border: none; border-radius: 8px;">
+                        <i class="fas fa-home me-1"></i>Back to Kiosk
+                    </a>
+                    <a href="/meal_records" class="btn fw-bold py-2" style="background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%); color: white; border: none; border-radius: 8px;">
+                        <i class="fas fa-receipt me-1"></i>View Meal Records
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
